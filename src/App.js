@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import Order from "./components/order";
+import mobile from "./images/pattern-background-mobile.svg";
+import desktop from "./images/pattern-background-desktop.svg";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="relative flex h-screen bg-[#E0E8FF] orderfont">
+      <img
+        src={mobile}
+        alt=""
+        className="absolute w-full object-cover sm:hidden"
+      />
+      <img
+        src={desktop}
+        alt=""
+        className="absolute w-full hidden sm:block object-cover"
+      />
+      <Order />
     </div>
   );
 }
